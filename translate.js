@@ -25,16 +25,24 @@ function setFlags() {
         pt: "portuguese.png",
     };
 
+    const flagText = {
+        de: "Alemão",
+        es: "Espanhol",
+        fr: "Francês",
+        en: "Inglês",
+        it: "Italiano",
+        pt: "Português",
+    };
+
     const defaultFlag = "portuguese.png";
     const defaultLanguage = "Português";
 
     const flagImage = flagImages[selectedValue] || defaultFlag;
     const flagAltText =
-        selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1);
-    const languageText = flagImages[selectedValue]
-        ? flagAltText
+        selectedValue.charAt(0).toLowerCase() + selectedValue.slice(1);
+    const languageText = flagText[flagAltText]
+        ? flagText[flagAltText]
         : defaultLanguage;
-
     iconFlagElement.innerHTML = `<img src="${baseUri}flags/${flagImage}" height="20" width="20" alt="${flagAltText}" />`;
     languageElement.textContent = languageText;
 }

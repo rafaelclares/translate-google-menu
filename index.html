@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <meta charset="utf-8" />
+    <head>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./translate.css" />
+        <title>Translate</title>
+    </head>
+    <body>
+        <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand notranslate" href="#">Empresa X</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul
+                        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                        style="--bs-scroll-height: 100px"
+                    ></ul>
+                    <ul class="d-flex navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                <span id="icon-flag_"></span>
+                                <span id="language_"></span>
+                            </a>
+
+                            <ul
+                                class="dropdown-menu dropdown-menu-end"
+                                aria-labelledby="navbarDropdownMenuLink"
+                            >
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="doGTranslate('pt|en');return false;"
+                                    title="English"
+                                    class="gflag nturl"
+                                >
+                                    <img
+                                        src="flags/english.png"
+                                        height="16"
+                                        width="16"
+                                        alt="English"
+                                    />
+                                    Inglês
+                                </a>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="doGTranslate('pt|fr');return false;"
+                                    title="French"
+                                    class="gflag nturl"
+                                >
+                                    <img
+                                        src="flags/french.png"
+                                        height="16"
+                                        width="16"
+                                        alt="French"
+                                    />
+                                    Francês
+                                </a>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="doGTranslate('pt|de');return false;"
+                                    title="German"
+                                    class="gflag nturl"
+                                >
+                                    <img
+                                        src="flags/german.png"
+                                        height="16"
+                                        width="16"
+                                        alt="German"
+                                    />
+                                    Alemão
+                                </a>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="doGTranslate('pt|it');return false;"
+                                    title="Italian"
+                                    class="gflag nturl"
+                                >
+                                    <img
+                                        src="flags/italian.png"
+                                        height="16"
+                                        width="16"
+                                        alt="Italian"
+                                    />
+                                    Italiano
+                                </a>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="doGTranslate('pt|pt');return false;"
+                                    title="Portuguese"
+                                    class="gflag nturl"
+                                >
+                                    <img
+                                        src="flags/portuguese.png"
+                                        height="16"
+                                        width="16"
+                                        alt="Portuguese"
+                                    />
+                                    Português
+                                </a>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="doGTranslate('pt|es');return false;"
+                                    title="Spanish"
+                                    class="gflag nturl"
+                                >
+                                    <img
+                                        src="flags/spanish.png"
+                                        height="16"
+                                        width="16"
+                                        alt="Spanish"
+                                    />
+                                    Espanhol
+                                </a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container">
+            <div class="p-5 rounded">
+                <h2>Bem-vindo ao Nosso Site!</h2>
+                <p>
+                    Estamos muito felizes em tê-lo(a) aqui. Nós somos
+                    apaixonados por tudo relacionado ao desenvolvimento web e
+                    estamos prontos para compartilhar conhecimentos, recursos e
+                    inspiração.
+                </p>
+
+                <p>
+                    Além disso, oferecemos um espaço para a comunidade, onde
+                    você pode interagir com outros desenvolvedores, fazer
+                    perguntas, compartilhar suas experiências e encontrar
+                    soluções para desafios comuns.
+                </p>
+
+                <p>
+                    Explore nosso site, confira nossos recursos e fique à
+                    vontade para entrar em contato conosco se tiver alguma
+                    dúvida ou sugestão. Estamos aqui para ajudar e fornecer um
+                    ambiente acolhedor para você expandir seus conhecimentos e
+                    alcançar seus objetivos como desenvolvedor(a) web.
+                </p>
+
+                <pre class="notranslate">
+<code>
+Este este jamais será traduzido por estar dentro de um elemento com a classe .notranslate                
+&lt;h1 class='notranslate'&gt;Não serei traduzido!&lt;/h1&gt;
+</code>
+</pre>
+            </div>
+        </main>
+
+        <div id="google_translate_element2"></div>
+        <script
+            type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./translate.js"></script>
+    </body>
+</html>
